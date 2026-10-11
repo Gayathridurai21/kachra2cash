@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kachra2Cash – India's Waste Economy Engine</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);--bg:#f3f6ee;--cd:#fff;--tx:#12231a;--mu:#5d6b62;--ac:#16a34a;--lm:#b6f23c;--bd:#dfe6d8}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c140f;--cd:#152019;--tx:#e9f3ec;--mu:#93a79a;--ac:#4ade80;--bd:#243428}}
+:root[data-theme="dark"]{--bg:#0c140f;--cd:#152019;--tx:#e9f3ec;--mu:#93a79a;--ac:#4ade80;--bd:#243428}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+main{max-width:600px;margin:auto;padding:12px}
+.hero{background:linear-gradient(135deg,#06351f,#0f6b3a 60%,#7bc62d);color:#fff;border-radius:22px;padding:16px;display:flex;gap:14px;align-items:center}
+.hero h1{font-size:20px;margin:0}.hero small{color:#d6f5dc}
+.ring{position:relative;width:96px;height:96px;flex:none}.ring svg{transform:rotate(-90deg)}.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:22px}
+.tp{display:flex;gap:6px;margin-top:6px;flex-wrap:wrap}select,.lg button{border:1px solid #ffffff55;background:#ffffff22;color:#fff;border-radius:8px;padding:4px 8px;font-size:13px}select option{color:#000}.lg button.on{background:var(--lm);color:#000}
+.card{background:var(--cd);border:1px solid var(--bd);border-radius:18px;padding:14px;margin:12px 0}h2{font-size:16px;margin:0 0 8px}small,.mu{color:var(--mu);font-size:13px}
+.row{display:flex;gap:8px;margin-top:8px}input[type=text],input[type=number]{flex:1;min-width:0;padding:12px;border:1px solid var(--bd);border-radius:12px;background:var(--bg);color:var(--tx);font-size:16px}input[type=range]{width:100%;accent-color:var(--ac)}
+.p,.bb{border:0;border-radius:12px;padding:12px 14px;font-size:15px;font-weight:700;color:#fff;background:var(--ac)}.p.w{background:#25d366}.bb{display:block;width:100%;margin:6px 0;text-align:left}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.chip{border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:20px;padding:7px 12px;font-size:14px}
+.bin{display:inline-block;color:#fff;border-radius:8px;padding:4px 10px;font-weight:700;font-size:14px}
+.lad{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0}.lad div{background:var(--bg);border-radius:10px;padding:8px;font-size:12px;text-align:center}
+.alert{background:#d33b3b;color:#fff;border-radius:10px;padding:8px 10px;margin:8px 0;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}.st{background:var(--bg);border-radius:12px;padding:10px;text-align:center}.st b{display:block;font-size:22px;color:var(--ac)}.st span{font-size:12px;color:var(--mu)}
+.bar{height:12px;background:var(--bg);border-radius:8px;overflow:hidden;margin:8px 0}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--ac),var(--lm))}
+.ch{display:flex;align-items:flex-end;gap:6px;height:80px}.ch i{flex:1;background:var(--ac);border-radius:5px 5px 0 0;min-height:3px}
+.lb{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid var(--bd);font-size:14px}.lb.me{color:var(--ac);font-weight:700}
+nav{position:fixed;left:0;right:0;bottom:0;display:flex;background:var(--cd);border-top:1px solid var(--bd);padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px))}
+nav button{flex:1;border:0;background:none;color:var(--mu);font-size:12px;padding:6px 0}nav button.on{color:var(--ac);font-weight:700}nav span{display:block;font-size:22px}
+[hidden]{display:none!important}
+</style></head><body><main>
+<div class="hero"><div class="ring"><svg width="96" height="96"><circle cx="48" cy="48" r="42" fill="none" stroke="#ffffff33" stroke-width="9"/><circle id="rg" cx="48" cy="48" r="42" fill="none" stroke="#b6f23c" stroke-width="9" stroke-linecap="round" stroke-dasharray="264" stroke-dashoffset="264"/></svg><b id="lv"></b></div>
+<div style="flex:1"><h1>Kachra2Cash</h1><small id="hs"></small><div class="tp"><select id="cty"></select><span class="lg" id="lg"></span></div></div></div>
+<section id="v0"><div class="card"><h2 id="t0"></h2><div class="row"><input type="text" id="q" autocomplete="off"><button class="p" id="mic">🎤</button><button class="p" id="cam">📷</button><input type="file" id="fi" accept="image/*" capture="environment" hidden></div><div class="chips" id="res"></div><div id="out"></div></div></section>
+<section id="v1" hidden></section><section id="v2" hidden></section><section id="v3" hidden></section>
+<p class="mu" style="text-align:center" id="ft"></p></main><nav id="nv"></nav>
+<script>
+const T={en:{sub:"India's waste economy engine",ph:"Type or speak: bottle, रद्दी, பால் பாக்கெட்...",h0:"What are you throwing away?",w:"Weight (kg)",add:"Add to my impact",nf:"Not found, try another word.",kg:"kg diverted",rs:"₹ recovered",co:"kg CO₂ saved",km:"car-km avoided",n0:"Scan",n1:"Pool",n2:"Play",n3:"Impact",bin:"Which bin?",lose:"Binning it wastes",haz:"⚠️ Hazardous: never put in normal bins!",reuse:"Reuse",sell:"Sell",bn:"Bin",lane:"Your lane / society name",hh:"Households in your pool",ev:"Pickup worth booking every",d:"days",inv:"Invite neighbours",req:"Request kabadi pickup",tg:"Target ₹500/pickup",again:"Play again",ok:"Correct! +10",no:"Oops, it goes in",wk:"Last 7 days (₹)",fc:"Your lane could earn per month",lb:"Lane leaderboard (sample lanes)",st:"day streak",ft:"Rates are indicative and scale by city. Data stays on your phone. Works offline."},
+hi:{sub:"भारत का कचरा-अर्थव्यवस्था इंजन",ph:"लिखें/बोलें: बोतल, रद्दी...",h0:"आप क्या फेंक रहे हैं?",w:"वज़न (किलो)",add:"मेरे असर में जोड़ें",nf:"नहीं मिला",kg:"किलो बचाया",rs:"₹ कमाए",co:"किलो CO₂ बचा",n0:"खोजें",n1:"पूल",n2:"खेलें",n3:"असर",bin:"कौन सा डिब्बा?",lose:"फेंकने पर नुकसान",haz:"⚠️ खतरनाक: सामान्य कूड़ेदान में न डालें!",reuse:"दोबारा",sell:"बेचें",bn:"डिब्बा",lane:"आपकी गली/सोसाइटी",hh:"पूल में घर",ev:"पिकअप हर",d:"दिन",inv:"पड़ोसियों को बुलाएँ",req:"कबाड़ी पिकअप माँगें",again:"फिर खेलें",ok:"सही! +10",no:"ग़लत, यह जाता है",wk:"पिछले 7 दिन (₹)",fc:"आपकी गली महीने में कमा सकती है",lb:"गली लीडरबोर्ड (नमूना)",st:"दिन लगातार"},
+ta:{sub:"இந்தியாவின் கழிவு பொருளாதார இயந்திரம்",ph:"தட்டச்சு/பேசுங்கள்: பாட்டில்...",h0:"எதை எறிகிறீர்கள்?",w:"எடை (கிலோ)",add:"சேர்",nf:"கிடைக்கவில்லை",kg:"கிலோ மீட்பு",rs:"₹ மீட்பு",co:"கிலோ CO₂",n0:"தேடு",n1:"குழு",n2:"விளையாடு",n3:"தாக்கம்",bin:"எந்த தொட்டி?",lose:"எறிந்தால் இழப்பு",haz:"⚠️ அபாயம்: சாதாரண தொட்டியில் போடாதீர்கள்!",reuse:"மறுபயன்",sell:"விற்க",bn:"தொட்டி",lane:"உங்கள் தெரு/குடியிருப்பு",hh:"குழுவில் வீடுகள்",ev:"பிக்கப் ஒவ்வொரு",d:"நாள்",inv:"அண்டை வீட்டாரை அழை",req:"பிக்கப் கோரு",again:"மீண்டும்",ok:"சரி! +10",no:"தவறு, சரியானது",wk:"கடந்த 7 நாள் (₹)",fc:"மாதம் உங்கள் தெரு சம்பாதிக்கலாம்",lb:"தெரு தரவரிசை (மாதிரி)",st:"நாள் தொடர்"}};
+const B={wet:["#2e9e4f",{en:"Wet · Green",hi:"गीला · हरा",ta:"ஈரம் · பச்சை"}],dry:["#2f6fd6",{en:"Dry · Blue",hi:"सूखा · नीला",ta:"உலர் · நீலம்"}],e:["#8a45c9",{en:"E-waste · Recycler",hi:"ई-कचरा · रीसाइक्लर",ta:"மின்னணு · மறுசுழற்சி"}],h:["#d33b3b",{en:"Hazardous · Red",hi:"खतरनाक · लाल",ta:"அபாயம் · சிவப்பு"}],s:["#555",{en:"Sanitary · Black",hi:"सैनिटरी · काला",ta:"சானிட்டரி · கருப்பு"}]};
+const C=[["Coimbatore",.95],["Chennai",1],["Delhi NCR",1.05],["Mumbai",1.1],["Bengaluru",1.05],["Hyderabad",1],["Kolkata",.9],["Jaipur",.95],["Other",1]];
+const LV=[[0,"🌱"],[100,"🌿"],[300,"🪴"],[700,"🌳"],[1500,"🌲"]];
+const D=[
+["news",["Newspaper","अखबार/रद्दी","செய்தித்தாள்"],"newspaper paper raddi pepar akhbar अखबार रद्दी पेपर காகிதம் பேப்பர்","dry",14,1,"Keep dry; wet paper pays less. Reuse as gift wrap."],
+["card",["Cardboard box","गत्ता","அட்டைப்பெட்டி"],"cardboard carton box gatta amazon गत्ता डिब्बा அட்டை","dry",8,.9,"Flatten; reuse as storage or drawer dividers."],
+["pet",["PET bottle","प्लास्टिक बोतल","பிளாஸ்டிக் பாட்டில்"],"pet bottle water bottle plastic bottle cold drink बोतल பாட்டில்","dry",12,1.5,"Rinse, crush, cap on. Upcycle into a planter."],
+["hard",["Hard plastic","कड़ा प्लास्टिक","கடின பிளாஸ்டிக்"],"bucket mug plastic hard container basin बाल्टी மக்","dry",10,1.5,"Buckets and mugs sell at full rate."],
+["pouch",["Milk pouch","दूध की थैली","பால் பாக்கெட்"],"milk pouch packet polythene thaili दूध थैली பால் பாக்கெட் கவர்","dry",10,1.2,"Rinse and dry; many dairies take them back."],
+["iron",["Iron / scrap","लोहा","இரும்பு"],"iron steel scrap metal lohe लोहा இரும்பு","dry",28,1.5,"Heavy items sell by weight."],
+["alu",["Aluminium can/foil","एल्युमिनियम","அலுமினியம்"],"aluminium aluminum can foil tin एल्युमिनियम அலுமினியம்","dry",100,9,"Highest value per kg. Crush cans."],
+["copper",["Copper wire","तांबा","செம்பு"],"copper wire cable taamba तांबा செம்பு","dry",550,3,"Stripped wire fetches a better rate."],
+["glass",["Glass bottle","काँच की बोतल","கண்ணாடி பாட்டில்"],"glass bottle jar sheesha काँच कांच கண்ணாடி","dry",2,.3,"Wrap broken glass in paper first."],
+["cloth",["Old clothes","पुराने कपड़े","பழைய துணி"],"clothes cloth saree shirt kapde कपड़े துணி புடவை","dry",5,3,"Donate wearable ones; rags become mops."],
+["book",["Books / notebooks","किताबें","புத்தகம்"],"book notebook copy kitab किताब कॉपी புத்தகம் நோட்டு","dry",12,1,"Donate old textbooks to juniors first."],
+["tetra",["Juice carton","जूस कार्टन","டெட்ரா பேக்"],"tetra pak carton juice box paper cup जूस கார்டன்","dry",3,.6,"Rinse and flatten."],
+["steel",["Utensils","बर्तन","பாத்திரம்"],"utensil steel brass bartan बर्तन பாத்திரம் tiffin","dry",40,1.5,"Exchange for new utensils."],
+["phone",["Old phone / charger","पुराना फ़ोन","பழைய போன்"],"phone mobile charger earphone cable headphone फ़ोन मोबाइल चार्जर போன் சார்ஜர்","e",150,2,"Wipe data; use brand take-back."],
+["appl",["Old appliance","पुराना उपकरण","பழைய மின்சாதனம்"],"fan mixer tv television laptop computer fridge appliance उपकरण टीवी லேப்டாப்","e",60,2,"Ask for exchange value before scrap."],
+["batt",["Battery / cell","बैटरी","பேட்டரி"],"battery cell lithium inverter बैटरी सेल பேட்டரி","h",0,0,"Hand to a battery collection point."],
+["bulb",["CFL / tube light","बल्ब/ट्यूब","பல்பு"],"cfl bulb tubelight tube light led बल्ब ट्यूब பல்பு","h",0,0,"Contains mercury; keep wrapped."],
+["med",["Expired medicine","एक्सपायर दवा","காலாவதி மருந்து"],"medicine tablet syrup expired drug दवा गोली மருந்து மாத்திரை","h",0,0,"Return to a pharmacy drop-box."],
+["paint",["Paint / chemicals","पेंट","பெயிண்ட்"],"paint thinner chemical pesticide cleaner पेंट रसायन பெயிண்ட்","h",0,0,"Keep in original tin for hazard drives."],
+["food",["Food scraps","बचा खाना/छिलके","உணவு கழிவு"],"food scraps vegetable peel leftover rice fruit kitchen waste खाना छिलका सब्ज़ी உணவு காய்கறி","wet",0,.4,"Compost at home or in a community pit."],
+["flower",["Flowers / leaves","फूल/पत्ते","பூ / இலை"],"flower puja leaves garden grass पूजा फूल पत्ते பூ இலை","wet",0,.3,"Compost; skip plastic wrapping."],
+["shell",["Coconut / egg shell","नारियल खोल","தேங்காய் ஓடு"],"eggshell coconut shell husk नारियल खोल தேங்காய் ஓடு முட்டை","wet",0,.2,"Dry coconut shells sell to craft buyers."],
+["pad",["Diaper / sanitary pad","पैड/डायपर","நாப்கின்"],"diaper pad sanitary napkin tampon पैड डायपर நாப்கின்","s",0,0,"Wrap in paper, mark with a red dot."]];
+const $=i=>document.getElementById(i);let S={lg:"en",city:0,lane:"",pts:0,led:[],hh:20},Q=null,cur=null,tab=0;
+try{Object.assign(S,JSON.parse(localStorage.getItem("k2c")||"{}"))}catch(e){}
+const sv=()=>{try{localStorage.setItem("k2c",JSON.stringify(S))}catch(e){}},t=k=>(T[S.lg]||{})[k]||T.en[k],li=()=>({en:0,hi:1,ta:2}[S.lg]),mu=()=>C[S.city][1],val=(d,w)=>w*d[4]*mu(),dd=k=>D.find(x=>x[0]==k);
+function tot(){let kg=0,rs=0,co=0;S.led.forEach(e=>{const d=dd(e.k);kg+=e.w;rs+=val(d,e.w);co+=e.w*d[5]});return{kg,rs,co}}
+function wk(){const a=Array(7).fill(0),n=new Date().setHours(0,0,0,0);S.led.forEach(e=>{const i=Math.floor((n-new Date(e.t).setHours(0,0,0,0))/864e5);if(i>=0&&i<7)a[6-i]+=val(dd(e.k),e.w)});return a}
+function streak(){const s=new Set(S.led.map(e=>new Date(e.t).toDateString()));let n=0,d=new Date();while(s.has(d.toDateString())){n++;d.setDate(d.getDate()-1)}return n}
+function hero(){let l=0;LV.forEach((v,i)=>{if(S.pts>=v[0])l=i});const lo=LV[l][0],hi=(LV[l+1]||[lo+1])[0],p=l==4?1:(S.pts-lo)/(hi-lo);$("rg").style.strokeDashoffset=264*(1-p);$("lv").textContent=LV[l][1]+" "+S.pts;$("hs").textContent=t("sub")+" · 🔥"+streak()+" "+t("st")}
+function head(){document.documentElement.lang=S.lg;$("lg").innerHTML=[["en","EN"],["hi","हिं"],["ta","த"]].map(([k,n])=>`<button data-a="lg" data-v="${k}" class="${k==S.lg?"on":""}">${n}</button>`).join("");$("cty").innerHTML=C.map((c,i)=>`<option value="${i}" ${i==S.city?"selected":""}>${c[0]}</option>`).join("");
+$("nv").innerHTML=["🔍","🤝","🎮","📊"].map((e,i)=>`<button class="${i==tab?"on":""}" data-a="tab" data-v="${i}"><span>${e}</span>${t("n"+i)}</button>`).join("");$("q").placeholder=t("ph");$("t0").textContent=t("h0");$("ft").textContent=t("ft");hero()}
+function show(i){tab=i;[0,1,2,3].forEach(x=>$("v"+x).hidden=x!=i);if(i==1){poolV();sync()}if(i==2){Q=null;playV()}if(i==3)impV();head()}
+function find(s){s=s.toLowerCase().trim();if(s.length<2)return[];const w=s.split(/\s+/);return D.filter(d=>{const a=d[2].toLowerCase(),tk=a.split(" ");return a.includes(s)||w.some(x=>x.length>1&&tk.some(k=>k&&(k.startsWith(x)||(x.length>3&&k.length>3&&x.startsWith(k)))))})}
+function search(){const r=find($("q").value);$("res").innerHTML=r.slice(0,6).map(d=>`<button class="chip" data-a="pick" data-v="${d[0]}">${d[1][li()]}</button>`).join("")||($("q").value.length>1?`<small>${t("nf")}</small>`:"")}
+function card(){if(!cur){$("out").innerHTML="";return}const b=B[cur[3]],r=Math.round(cur[4]*mu());$("out").innerHTML=`<hr style="border:0;border-top:1px solid var(--bd)"><h2>${cur[1][li()]}</h2><span class="bin" style="background:${b[0]}">${b[1][S.lg]}</span>${cur[3]=="h"?`<div class="alert">${t("haz")}</div>`:""}
+<div class="lad"><div>♻️ ${t("reuse")}<br><b>${cur[6].split(/[.;]/)[0]}</b></div><div>💰 ${t("sell")}<br><b>₹${r}/kg</b></div><div>🗑️ ${t("bn")}<br><b>${b[1][S.lg].split(" ")[0]}</b></div></div>
+${r?`<p>😮 ${t("lose")} <b>₹${r}</b>/kg · 🌍 ${cur[5]} kg CO₂/kg</p>`:""}<small>${cur[6]}</small><div class="row"><input type="number" id="wt" step="0.1" min="0.1" value="1" aria-label="${t("w")}"><button class="p" data-a="add">${t("add")}</button></div><small>${t("w")}</small>`}
+function poolV(){const n=S.hh,w=wk().reduce((a,b)=>a+b,0)||40,wv=w*n,days=Math.max(1,Math.ceil(500/(wv/7))),fc=Math.round(wv*4.3),me=S.lane||"My lane";
+const L=(LIVE||[["Green Valley, Coimbatore",1240],["Lotus Apts, Delhi",980],["Sector 9, Jaipur",610],["Anna Nagar, Chennai",420]]).filter(x=>x[0]!=me).concat([[me,S.pts]]).sort((a,b)=>b[1]-a[1]);
+$("v1").innerHTML=`<div class="card"><h2>🤝 ${t("n1")}</h2><input type="text" id="ln" value="${S.lane}" placeholder="${t("lane")}"><div class="row"><b>${t("hh")}: ${n}</b></div><input type="range" id="hh" min="2" max="300" value="${n}"><div class="bar"><i style="width:${Math.min(100,wv/5)}%"></i></div><small>${t("tg")}</small>
+<p>⏱️ ${t("ev")} <b>${days} ${t("d")}</b><br>📈 ${t("fc")}: <b>₹${fc}</b></p><div class="row"><button class="p w" data-a="inv" style="flex:1">💬 ${t("inv")}</button><button class="p w" data-a="req" style="flex:1">🚚 ${t("req")}</button></div></div>
+<div class="card"><h2>🏆 ${t("lb")}</h2>${L.map((x,i)=>`<div class="lb ${x[0]==me?"me":""}"><span>${i+1}. ${x[0]}</span><span>${x[1]} pts</span></div>`).join("")}</div>`}
+function playV(){if(!Q)Q={n:0,s:0};if(Q.n>=5){$("v2").innerHTML=`<div class="card"><h2>🎉 ${Q.s}/5</h2><button class="p" data-a="again">${t("again")}</button></div>`;return}
+Q.it=D[Math.random()*D.length|0];$("v2").innerHTML=`<div class="card"><small>${Q.n+1}/5 · ⭐ ${S.pts}</small><h2>${t("bin")}</h2><div style="font-size:24px;margin:6px 0 10px">${Q.it[1][li()]}</div><div id="fb"></div>${Object.keys(B).map(k=>`<button class="bb" style="background:${B[k][0]}" data-a="ans" data-v="${k}">${B[k][1][S.lg]}</button>`).join("")}</div>`}
+function impV(){const x=tot(),w=wk(),m=Math.max(1,...w);$("v3").innerHTML=`<div class="card"><h2>📊 ${t("n3")}</h2><div class="grid">${[[x.kg.toFixed(1),t("kg")],["₹"+Math.round(x.rs),t("rs")],[x.co.toFixed(1),t("co")],[Math.round(x.co/.12),t("km")]].map(s=>`<div class="st"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}</div></div>
+<div class="card"><h2>${t("wk")}</h2><div class="ch">${w.map(v=>`<i style="height:${v/m*100}%"></i>`).join("")}</div></div><div class="card"><button class="p w" data-a="share" style="width:100%">💬 WhatsApp</button></div>`}
+const wa=m=>open("https://wa.me/?text="+encodeURIComponent(m),"_blank");
+const A={lg:v=>{S.lg=v;sv();head();search();card();show(tab)},tab:v=>show(+v),pick:v=>{cur=dd(v);card()},
+add:()=>{const w=Math.max(.1,parseFloat($("wt").value)||1);S.led.unshift({k:cur[0],w,t:Date.now()});S.pts+=Math.round(w*10+1);sv();hero();$("out").insertAdjacentHTML("afterbegin",`<div class="alert" style="background:var(--ac)">✅ +${Math.round(w*10+1)} pts</div>`)},
+ans:k=>{const ok=k==Q.it[3];if(ok){Q.s++;S.pts+=10;sv()}Q.n++;$("fb").innerHTML=`<div class="alert" style="background:${ok?"var(--ac)":"#d33b3b"}">${ok?t("ok"):t("no")+" "+B[Q.it[3]][1][S.lg]}</div>`;hero();setTimeout(playV,1100)},
+again:()=>{Q=null;playV()},
+inv:()=>wa(`Join our lane's recycling pool on Kachra2Cash! ${S.hh} homes together can earn from kabadi pickups instead of binning recyclables. – ${S.lane||"our lane"}`),
+req:()=>{const m={};S.led.forEach(e=>m[e.k]=(m[e.k]||0)+e.w*S.hh);const it=Object.entries(m).map(([k,w])=>`${dd(k)[1][0]}: ${w.toFixed(0)}kg`).join(", ")||"mixed recyclables";wa(`Namaste! ${S.hh} homes in ${S.lane||"our lane"} (${C[S.city][0]}) have pooled recyclables for one pickup (${it}). Please quote rates and a slot. – via Kachra2Cash`)},
+share:()=>{const x=tot();wa(`♻️ My Kachra2Cash impact: ${x.kg.toFixed(1)} kg diverted, ₹${Math.round(x.rs)} recovered, ${x.co.toFixed(1)} kg CO₂ saved. Level points: ${S.pts}. Can your lane beat me?`)}};
+document.addEventListener("click",e=>{const b=e.target.closest("[data-a]");if(b)A[b.dataset.a](b.dataset.v)});
+document.addEventListener("input",e=>{if(e.target.id=="hh"){S.hh=+e.target.value;sv();poolV();$("hh").focus()}if(e.target.id=="ln"){S.lane=e.target.value;sv()}});
+$("cty").onchange=e=>{S.city=+e.target.value;sv();card()};$("q").oninput=search;
+const SR=window.SpeechRecognition||window.webkitSpeechRecognition;if(!SR)$("mic").hidden=true;else $("mic").onclick=()=>{const r=new SR();r.lang={en:"en-IN",hi:"hi-IN",ta:"ta-IN"}[S.lg];r.onresult=e=>{$("q").value=e.results[0][0].transcript;search()};try{r.start()}catch(e){}};
+const API="";// paste ApiUrl from `sam deploy` output
+let LIVE=null;
+async function sync(){if(!API||!S.lane)return;try{await fetch(API+"/lane",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({lane:S.lane,pts:S.pts,hh:S.hh})});const j=await(await fetch(API+"/leaderboard")).json();LIVE=j.map(x=>[x.lane,x.pts]);if(tab==1)poolV()}catch(e){}}
+if(!API)$("cam").hidden=true;else{$("cam").onclick=()=>$("fi").click();$("fi").onchange=async e=>{const f=e.target.files[0];if(!f)return;$("out").innerHTML="<small>🔎 Amazon Bedrock scanning...</small>";try{const im=await createImageBitmap(f),s=Math.min(1,768/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*s;c.height=im.height*s;c.getContext("2d").drawImage(im,0,0,c.width,c.height);const r=await fetch(API+"/scan",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({image:c.toDataURL("image/jpeg",.8).split(",")[1]})}),j=await r.json(),d=dd(j.key);if(d){cur=d;card()}else $("out").innerHTML="<small>"+t("nf")+"</small>"}catch(x){$("out").innerHTML="<small>"+t("nf")+"</small>"}}}
+head();show(0);
+</script></body></html>
